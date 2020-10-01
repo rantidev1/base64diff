@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/offset/IOffsetCalculator.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/offset/IOffsetLengthCalculator.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/offset/OffsetCalculator.java">
+<error line="20" severity="warning" message="Wrong order for &apos;org.slf4j.Logger&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/offset/OffsetLengthCalculator.java">
+<error line="21" severity="warning" message="Wrong order for &apos;org.slf4j.Logger&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/offset/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/persist/Base64DocumentPersister.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/persist/IBase64DocumentPersister.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/persist/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/response/Base64DiffRespnseWriter.java">
+<error line="20" severity="warning" message="Wrong order for &apos;org.slf4j.Logger&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/response/IBase64DiffResponder.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/response/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/validator/Base64DataValidator.java">
+<error line="21" severity="warning" message="Wrong order for &apos;org.slf4j.Logger&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="25" severity="warning" message="Wrong order for &apos;org.apache.commons.lang3.StringUtils&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/validator/Base64Validator.java">
+<error line="20" severity="warning" message="Wrong order for &apos;org.apache.commons.lang3.StringUtils&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/validator/IBase64DataValidator.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/validator/IBase64Validator.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/base64/components/validator/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/Base64DiffApplication.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/config/AppConfig.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/config/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/config/SpringFoxConfig.java">
+<error line="28" severity="warning" message="Wrong order for &apos;java.util.Collections&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/controller/Base64DiffController.java">
+<error line="32" severity="warning" message="Wrong order for &apos;com.waes.diff.model.Base64Data&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="33" severity="warning" message="Wrong order for &apos;com.waes.diff.entity.Base64Document&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/controller/HomeController.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/controller/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/entity/Base64Document.java">
+<error line="21" severity="warning" message="Wrong order for &apos;javax.persistence.Column&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="143" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="145" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="147" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="150" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="153" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="155" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="158" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="160" severity="warning" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/entity/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/enums/Base64DocumentSide.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/enums/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/exception/ErrorMessage.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/exception/ExceptionHelper.java">
+<error line="19" severity="warning" message="Wrong order for &apos;org.springframework.http.HttpStatus&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/exception/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/exception/ResourceNotFoundException.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/model/Base64Data.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/model/Base64DiffResponse.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/model/OffsetLength.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/model/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/repository/Base64DocumentRepository.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/repository/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/service/Base64DocumentDiffService.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/service/impl/Base64DocumentDiffServiceImpl.java">
+<error line="19" severity="warning" message="Wrong order for &apos;org.springframework.beans.factory.annotation.Autowired&apos; import." source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/service/impl/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/service/package-info.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/util/Constants.java">
+</file>
+<file name="/Volumes/HDD_500_GB/development/eclipse-workspace/waes-diff/src/main/java/com/waes/diff/util/package-info.java">
+</file>
+</checkstyle>
