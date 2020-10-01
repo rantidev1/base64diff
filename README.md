@@ -2,8 +2,6 @@
 
 ## https://app.swaggerhub.com/apis/rantidev1/api-documentation/1.0
 
-# Base64-comparator
-
 This project is created as per the requirements of the assigmnet provided by WAES.
 The purpose of this project is to compare the base64 encoded binary data via the 
 REST api which accepts/produces json input/output. 
