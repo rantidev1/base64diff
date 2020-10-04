@@ -19,8 +19,8 @@ import javax.xml.bind.ValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.waes.diff.base64.components.comparator.IBase64DataComparator;
 import com.waes.diff.base64.components.persist.IBase64DocumentPersister;
-import com.waes.diff.base64.components.validator.IBase64DataValidator;
 import com.waes.diff.base64.components.validator.IBase64Validator;
 import com.waes.diff.entity.Base64Document;
 import com.waes.diff.enums.Base64DocumentSide;
@@ -28,8 +28,9 @@ import com.waes.diff.model.Base64DiffResponse;
 import com.waes.diff.service.Base64DocumentDiffService;
 
 /**
- * The Class Base64DocumentDiffServiceImpl.
+ * The implementation class for Base64DocumentDiffService interface.
  * 
+ * @see {com.waes.diff.service.Base64DocumentDiffService}
  * @author Rantidev Singh
  * @version 1.0
  * @since 2020-10-01
@@ -42,7 +43,7 @@ public class Base64DocumentDiffServiceImpl implements Base64DocumentDiffService 
     private IBase64Validator iBase64Validator;
 
     @Autowired
-    private IBase64DataValidator iBase64DataValidator;
+    private IBase64DataComparator iBase64DataValidator;
 
     /** The i base 64 document persister. */
     @Autowired
@@ -84,11 +85,11 @@ public class Base64DocumentDiffServiceImpl implements Base64DocumentDiffService 
      *
      * @param id the id
      * @return the base 64 diff response
-     * @see com.waes.diff.service.Base64DocumentDiffService#validateBase64Data(java.lang.Long)
+     * @see com.waes.diff.service.Base64DocumentDiffService#compareBase64Data(java.lang.Long)
      */
     @Override
-    public Base64DiffResponse validateBase64Data(Long id) {
-        return iBase64DataValidator.validateBase64Data(id);
+    public Base64DiffResponse compareBase64Data(Long id) {
+        return iBase64DataValidator.compareBase64Data(id);
     }
 
 }

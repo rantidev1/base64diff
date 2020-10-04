@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.waes.diff.base64.components.validator;
+package com.waes.diff.base64.components.comparator;
 
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -27,12 +27,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import com.waes.diff.base64.components.comparator.IBase64DataComparator;
 import com.waes.diff.model.Base64DiffResponse;
 import com.waes.diff.repository.Base64DocumentRepository;
 import com.waes.diff.util.Constants;
 
 /**
- * The Class Base64DataValidatorTest.
+ * The Class Base64DataComparatorTest.
  * 
  * @author Rantidev Singh
  * @version 1.0
@@ -41,11 +42,11 @@ import com.waes.diff.util.Constants;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class Base64DataValidatorTest {
+public class Base64DataComparatorTest {
 
     /** The base 64 data validator. */
     @Autowired
-    private Base64DataValidator base64DataValidator;
+    private IBase64DataComparator iBase64DataComparator;
 
     /** The repository. */
     @Mock
@@ -69,7 +70,7 @@ public class Base64DataValidatorTest {
     @Test
     public void diffNoDataFound() throws Exception {
         Mockito.doReturn(null).when(repository).findById(Mockito.eq(2L));
-        Base64DiffResponse base64DiffResponse = base64DataValidator.validateBase64Data(2L);
+        Base64DiffResponse base64DiffResponse = iBase64DataComparator.compareBase64Data(2L);
         Assert.assertThat(base64DiffResponse.getMessage(), Matchers.is(Constants.NO_DATA_FOUND));
     }
 

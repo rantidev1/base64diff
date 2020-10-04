@@ -13,4 +13,38 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.waes.diff.service;
+package com.waes.diff.util;
+
+import java.util.Base64;
+
+import com.waes.diff.exception.Base64Exception;
+import com.waes.diff.model.Base64Data;
+
+/**
+ * 
+ * @author Rantidev Singh
+ * @version 1.0
+ * @since 2020-10-01
+ *
+ */
+
+public class Base64Util {
+
+    /**
+     * Decode base 64 data.
+     *
+     * @param data the data
+     * @throws Base64Exception the base64exception signals that the data is not a
+     *                         Valid base64 encoded value
+     */
+    public static void decodeBase64Data(Base64Data data) {
+
+        try {
+            Base64.getDecoder().decode(data.getData());
+        } catch (Exception ex) {
+            throw new Base64Exception(Constants.NOT_VALID_BASE64_ENCODED_VALUE);
+        }
+
+    }
+
+}

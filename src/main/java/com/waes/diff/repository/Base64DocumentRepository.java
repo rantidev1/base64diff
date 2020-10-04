@@ -28,10 +28,11 @@ import com.waes.diff.entity.Base64Document;
 public interface Base64DocumentRepository extends CrudRepository<Base64Document, Long> {
 
     /**
-     * Find by id.
+     * This method finds the
+     * Base64Document @see{com.waes.diff.entity.Base64Document} by {id} .
      *
      * @param id the id
-     * @return the base 64 document
+     * @return the instance of Base64Document for supplied {id}
      */
     Base64Document findById(long id);
 }

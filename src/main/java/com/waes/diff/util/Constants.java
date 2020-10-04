@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.waes.diff.util;
 
+
 /**
  * The Interface Constants.
  * 
@@ -39,5 +40,12 @@ public interface Constants {
 
     /** The Constant BASE64_DATA_MISSING. */
     public static final String BASE64_DATA_MISSING = "Base64 data missing";
+
+    /** The Constant NOT_VALID_BASE64_ENCODED_VALUE. */
+    public static final String NOT_VALID_BASE64_ENCODED_VALUE = "This is not a valid Base64 encoded value";
+    
+
+    /** The Constant DIFFS_ARE_NOT_FOUND_WITH_ID. */
+    public static final String DIFFS_ARE_NOT_FOUND_WITH_ID = "diffs are not found with id ";
 
 }

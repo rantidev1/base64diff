@@ -78,9 +78,9 @@ public class Base64DiffControllerIntegrationTest {
      */
     @Test
     public void insert() throws Exception {
-        left();
-        Thread.sleep(3000);
-        right();
+        createLeftBase64DocumentTest();
+        Thread.sleep(2000);
+        createRightBase64DocumentTest();
     }
 
     /**
@@ -89,7 +89,7 @@ public class Base64DiffControllerIntegrationTest {
      * @throws Exception the exception
      */
     @SuppressWarnings("deprecation")
-    private void left() throws Exception {
+    private void createLeftBase64DocumentTest() throws Exception {
         mvc.perform(MockMvcRequestBuilders.post("/v1/diff/1/left").accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON).content("{\n" + "  \"data\": "
                         + "  \"d3JpdGluZyBpbnRlZ3JhdGlvbiB0ZXN0IGZvciBkaWZmIGNvbnRyb2xsZXI=\"" + "}"))
@@ -106,7 +106,7 @@ public class Base64DiffControllerIntegrationTest {
      *
      * @throws Exception the exception
      */
-    private void right() throws Exception {
+    private void createRightBase64DocumentTest() throws Exception {
         mvc.perform(MockMvcRequestBuilders.post("/v1/diff/1/right").accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON).content("{\n" + "  \"data\": "
                         + "  \"d3JpdGluZyBpbnRlZ3JhdGlvbiB0ZXN0IGZvciBkaWZmIGNvbnRyb2xsZXI=\"" + "}"))
@@ -125,7 +125,7 @@ public class Base64DiffControllerIntegrationTest {
      * @throws Exception the exception
      */
     @Test
-    public void equal() throws Exception {
+    public void equalTest() throws Exception {
         repository.save(new Base64Document(1l, "d3JpdGluZyBpbnRlZ3JhdGlvbiB0ZXN0IGZvciBkaWZmIGNvbnRyb2xsZXI=",
                 "d3JpdGluZyBpbnRlZ3JhdGlvbiB0ZXN0IGZvciBkaWZmIGNvbnRyb2xsZXI="));
         mvc.perform(MockMvcRequestBuilders.get("/v1/diff/1").accept(MediaType.APPLICATION_JSON)

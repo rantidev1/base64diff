@@ -30,11 +30,21 @@ import com.waes.diff.model.OffsetLength;
 public interface IBase64DiffResponder {
 
     /**
-     * Write response.
+     * This is the convenience method which wraps the data namely message and
+     * offsetLengthList in to the Base64DiffResponse.
+     * 
+     * @see com.waes.diff.model.Base64DiffResponse
      *
-     * @param message          the message
-     * @param offsetLengthList the offset length list
-     * @return the base 64 diff response
+     * @param message the message which is returned after comparing the left and
+     *                right side of the base64 encoded document.
+     * @see com.waes.diff.entity.Base64Document
+     * @param offsetLengthList the list of OffsetLength
+     * @see com.waes.diff.model.OffsetLength
+     * @return the Base64DiffResponse , which contains the String message based on
+     *         the comparison of left and right side of the base64 encoded document.
+     *         if the left and right side of the base64 encoded document are of
+     *         equal size then offsetLengthList will have offsets at which left and
+     *         right side differs along with the offset length.
      */
     Base64DiffResponse writeResponse(String message, List<OffsetLength> offsetLengthList);
 }

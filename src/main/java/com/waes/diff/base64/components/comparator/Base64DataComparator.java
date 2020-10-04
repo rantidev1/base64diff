@@ -13,28 +13,25 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.waes.diff.base64.components.validator;
+package com.waes.diff.base64.components.comparator;
 
 import java.util.Arrays;
 import java.util.List;
-
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.apache.commons.lang3.StringUtils;
 
 import com.waes.diff.base64.components.offset.IOffsetCalculator;
 import com.waes.diff.base64.components.offset.IOffsetLengthCalculator;
 import com.waes.diff.base64.components.response.IBase64DiffResponder;
-import com.waes.diff.entity.Base64Document;
 import com.waes.diff.model.Base64DiffResponse;
-import com.waes.diff.model.OffsetLength;
 import com.waes.diff.repository.Base64DocumentRepository;
 import com.waes.diff.util.Constants;
 
 /**
- * The Class Base64DataValidator.
+ * The Class Base64DataComparator.
  *
  * @author Rantidev Singh
  * @version 1.0
@@ -42,10 +39,10 @@ import com.waes.diff.util.Constants;
  */
 
 @Component
-public class Base64DataValidator implements IBase64DataValidator {
+public class Base64DataComparator implements IBase64DataComparator {
 
     /** The Constant LOG. */
-    private static final Logger LOG = LoggerFactory.getLogger(Base64DataValidator.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Base64DataComparator.class);
 
     /** The i offset length calculator. */
     @Autowired
@@ -68,12 +65,12 @@ public class Base64DataValidator implements IBase64DataValidator {
      *
      * @param id the id
      * @return the base 64 diff response
-     * @see com.waes.diff.base64.components.validator.IBase64DataValidator#validateBase64Data(java.
+     * @see com.waes.diff.base64.components.comparator.IBase64DataComparator#compareBase64Data(java.
      *      lang.Long)
      */
     @Override
-    public Base64DiffResponse validateBase64Data(Long id) {
-        LOG.trace("Entering validateBase64Data(id={})", id);
+    public Base64DiffResponse compareBase64Data(Long id) {
+        LOG.trace("Entering compareBase64Data(id={})", id);
 
         LOG.debug("trying to find the document for id '{}'", id);
         var base64Document = base64DocumentRepository.findById(id).orElse(null);

@@ -28,12 +28,15 @@ import com.waes.diff.enums.Base64DocumentSide;
 public interface IBase64DocumentPersister {
 
     /**
-     * Save.
+     * Saves the base64 encoded data with side (either left/right) in to the
+     * database.
      *
      * @param id   the id
-     * @param data the data
-     * @param side the side
-     * @return the base 64 document
+     * @param data the base64 encoded data
+     * @param side the side of the base64 encoded document
+     * @see com.waes.diff.enums.Base64DocumentSide
+     * @return the Base64Document
+     * @see com.waes.diff.entity.Base64Document
      * @throws Exception the exception
      */
     Base64Document save(Long id, String data, Base64DocumentSide side) throws Exception;

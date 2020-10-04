@@ -13,25 +13,40 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.waes.diff.base64.components.validator;
+package com.waes.diff.exception;
 
-import com.waes.diff.model.Base64DiffResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * The Interface IBase64DataValidator.
+ * The Class Base64Exception.
  *
  * @author Rantidev Singh
  * @version 1.0
  * @since 2020-10-01
  */
-public interface IBase64DataValidator {
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class Base64Exception extends RuntimeException {
+
+    /** The Constant serialVersionUID. */
+    private static final long serialVersionUID = 1L;
 
     /**
-     * Validate base 64 data.
+     * Instantiates a new base 64 exception.
      *
-     * @param id the id
-     * @return the base 64 diff response
+     * @param message the message
      */
-    Base64DiffResponse validateBase64Data(Long id);
+    public Base64Exception(String message) {
+        super(message);
+    }
 
+    /**
+     * Instantiates a new base 64 exception.
+     *
+     * @param message the message
+     * @param cause   the cause
+     */
+    public Base64Exception(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

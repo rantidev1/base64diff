@@ -13,47 +13,21 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.waes.diff.service;
+package com.waes.diff.base64.components.comparator;
 
-import javax.xml.bind.ValidationException;
-
-import com.waes.diff.entity.Base64Document;
-import com.waes.diff.enums.Base64DocumentSide;
 import com.waes.diff.model.Base64DiffResponse;
 
 /**
- * The Interface Base64DocumentDiffService represents the service layer for diff
- * api.
- * 
+ * The Interface IBase64DataComparator.
+ *
  * @author Rantidev Singh
  * @version 1.0
  * @since 2020-10-01
  */
-public interface Base64DocumentDiffService {
+public interface IBase64DataComparator {
 
     /**
-     * Save.
-     *
-     * @param id   the id
-     * @param data the data
-     * @param side the side
-     * @return the base 64 document
-     * @throws Exception the exception
-     */
-    Base64Document save(Long id, String data, Base64DocumentSide side) throws Exception;
-
-    /**
-     * Validate.
-     *
-     * @param id   the id
-     * @param data the data
-     * @return true, if successful
-     * @throws ValidationException the validation exception
-     */
-    boolean validate(Long id, String data) throws ValidationException;
-
-    /**
-     * Compare base 64 data.
+     * Comparing base64 encoded data for left and right hand side of .
      *
      * @param id the id
      * @return the base 64 diff response

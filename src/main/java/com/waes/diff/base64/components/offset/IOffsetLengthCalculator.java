@@ -29,10 +29,17 @@ import com.waes.diff.model.OffsetLength;
 public interface IOffsetLengthCalculator {
 
     /**
-     * Calculate offset length.
-     *
-     * @param offsetArray the offset array
-     * @return the list
+     * Calculates the offset length based on the content of offsetArray. offsetArray
+     * will have all the indexes at which the base64 encoded data (left and right
+     * side) differs.
+     * 
+     * @param offsetArray offsetArray will have all the indexes at which the base64
+     *                    encoded data (left and right side) differs. offsetArray will
+     *                    also have the last element as the Integer "-1" to
+     *                    demarcate the end of offsets in the array.
+     * 
+     * @return the list of OffsetLength
+     * @see com.waes.diff.model.OffsetLength
      */
     List<OffsetLength> calculateOffsetLength(Integer[] offsetArray);
 

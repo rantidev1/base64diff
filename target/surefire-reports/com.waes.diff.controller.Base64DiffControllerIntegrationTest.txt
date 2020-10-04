@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.waes.diff.controller.Base64DiffControllerIntegrationTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.515 s - in com.waes.diff.controller.Base64DiffControllerIntegrationTest

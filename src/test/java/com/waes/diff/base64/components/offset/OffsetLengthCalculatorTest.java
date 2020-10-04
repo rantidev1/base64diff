@@ -61,7 +61,7 @@ public class OffsetLengthCalculatorTest {
      * @throws Exception the exception
      */
     @Test
-    public void calculateOffsetLength() throws Exception {
+    public void calculateOffsetLengthTest() throws Exception {
         List<OffsetLength> offsetLengthList = offsetLengthCalculatorTest.calculateOffsetLength(null);
         Assert.assertEquals(offsetLengthList, null);
     }

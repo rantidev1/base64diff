@@ -29,10 +29,12 @@ import com.waes.diff.entity.Base64Document;
 public interface IOffsetCalculator {
 
     /**
-     * Calculate offsets.
+     * Calculates offsets which are different between the left side and right side
+     * of the base64 encoded data.
      *
-     * @param base64Document the base 64 document
-     * @return the list
+     * @param base64Document the Base64Document entity
+     * @see com.waes.diff.entity.Base64Document
+     * @return the list of Integer indexes at which the base64 encoded data differs
      */
     public List<Integer> calculateOffsets(Base64Document base64Document);
 }

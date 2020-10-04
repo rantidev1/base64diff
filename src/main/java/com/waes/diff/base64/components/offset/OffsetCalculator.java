@@ -21,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import com.waes.diff.entity.Base64Document;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Class OffsetCalculator.
@@ -43,7 +44,7 @@ public class OffsetCalculator implements IOffsetCalculator {
      * @param base64Document the base 64 document
      * @return the list
      * @see com.waes.diff.base64.components.offset.IOffsetCalculator#calculateOffsets(
-     * com.waes.diff.entity.Base64Document)
+     *      com.waes.diff.entity.Base64Document)
      */
     @Override
     public List<Integer> calculateOffsets(Base64Document base64Document) {
@@ -52,8 +53,7 @@ public class OffsetCalculator implements IOffsetCalculator {
 
         var offsetList = new ArrayList<Integer>();
 
-        if (base64Document.getLeft() == null || base64Document.getLeft().isEmpty() || base64Document.getRight() == null
-                || base64Document.getRight().isEmpty()) {
+        if (StringUtils.isBlank(base64Document.getLeft()) || StringUtils.isBlank(base64Document.getRight())) {
             return offsetList;
         }
 

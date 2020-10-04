@@ -1,7 +1,0 @@
-com/waes/diff/controller/Base64DiffControllerIntegrationTest.class
-com/waes/diff/base64/components/persist/Base64DocumentPersisterTest.class
-com/waes/diff/DiffApplicationTest.class
-com/waes/diff/base64/components/offset/OffsetCalculatorTest.class
-com/waes/diff/base64/components/response/Base64DiffResponseWriterTest.class
-com/waes/diff/base64/components/offset/OffsetLengthCalculatorTest.class
-com/waes/diff/base64/components/validator/Base64DataValidatorTest.class

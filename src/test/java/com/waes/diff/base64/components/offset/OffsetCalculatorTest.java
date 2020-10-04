@@ -16,7 +16,6 @@
 package com.waes.diff.base64.components.offset;
 
 import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +25,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import com.waes.diff.entity.Base64Document;
 
 /**
@@ -45,6 +43,7 @@ public class OffsetCalculatorTest {
     @InjectMocks
     private OffsetCalculator offsetCalculator;
 
+
     /**
      * Setup.
      *
@@ -56,15 +55,28 @@ public class OffsetCalculatorTest {
     }
 
     /**
-     * Calculate offsets.
+     * Calculate offsets not found test.
      *
      * @throws Exception the exception
      */
     @Test
-    public void calculateOffsets() throws Exception {
-        Base64Document base64Document = new Base64Document(1L, null, "Right");
+    public void calculateOffsetsNotFoundTest() throws Exception {
+        Base64Document base64Document = new Base64Document(1L, null, "anVzIGEgc2ltcGxlIHRlc3Q=");
         List<Integer> offsetList = offsetCalculator.calculateOffsets(base64Document);
         Assert.assertTrue(offsetList.isEmpty());
+    }
+
+    /**
+     * Calculate offsets test.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void calculateOffsetsTest() throws Exception {
+        Base64Document base64Document = new Base64Document(3L, "anVzIGEgc2ltcGxlIHRlc3Q=", "anVzIGEgc2ltcGxlIHFxcXE=");
+
+        List<Integer> offsetList = offsetCalculator.calculateOffsets(base64Document);
+        Assert.assertTrue(offsetList.size() > 0);
     }
 
 }

@@ -49,6 +49,24 @@ public class ExceptionHelper {
         return new ResponseEntity<ErrorMessage>(message, HttpStatus.NOT_FOUND);
     }
 
+    
+    /**
+     * Handle base 64 exception exception.
+     *
+     * @param ex the ex
+     * @param request the request
+     * @return the response entity
+     */
+    @ExceptionHandler(value = { Base64Exception.class })
+    public ResponseEntity<ErrorMessage> handleBase64ExceptionException(Base64Exception ex,
+            WebRequest request) {
+        ErrorMessage message = new ErrorMessage(HttpStatus.BAD_REQUEST.value(), new Date(), ex.getMessage(),
+                request.getDescription(false));
+
+        return new ResponseEntity<ErrorMessage>(message, HttpStatus.BAD_REQUEST);
+    }
+
+    
     /**
      * Global exception handler.
      *
