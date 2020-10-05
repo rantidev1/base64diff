@@ -78,3 +78,22 @@ $ mvn test
 ## Testing API
 1. API can be tested using Postman/Soap Ui
 2. Swagger is also included in api , I would suggest to use swagger then there is no need to perform extra work.
+
+## Things included in current version :
+1. JavaDocs are aslo included, to generate javadocs use 
+	```
+	$cd base64diff
+	$ mvn javadoc:javadoc
+	```
+	Then go to the folder /target/site/apidocs
+
+2. Googles code convention is being forced via the checkstyle.xml.
+3. Swagger is included and automatic updation of swagger specification is done.
+
+## Things to be included in future version :
+1. There should be another version of API for example V2 where user can post left and right side of 
+	data in one api call.
+2. CI/CD should also be implemented for this api.
+3. If we want to move to microservioces architecture then probably we can look for Netflix OSS
+    (apigateway , service descovery , cloud config etc.)
+4. Current version doen't support maven/spring profiles , which needs to be implemented.
