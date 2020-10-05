@@ -6,6 +6,9 @@ This project is created as per the requirements of the assignment provided by WA
 The purpose of this project is to compare the base64 encoded binary data via the
 REST API which accepts/produces JSON input/output. 
 
+### Design Principles :
+This api has been developed using SOLID design principles. More info about SOLID 
+design principles can be found on https://en.wikipedia.org/wiki/SOLID
 
 ### Requirements:
 	
