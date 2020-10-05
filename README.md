@@ -45,6 +45,17 @@ Another way to run this api is to use docker (latest image is already pushed to 
 $ docker run -p 8080:8080 rantidev7/base64-diff-api:latest
 
 ```
+Or if there is need to build new image then it can also be build and pushed to 
+docker hub via 
+
+```sh
+$ cd base64diff
+$ mvn jib:build
+```
+And then run 
+```
+$ docker run -p 8080:8080 rantidev7/base64-diff-api:latest
+```
 
 
 ## Running tests
