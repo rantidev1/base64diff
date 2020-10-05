@@ -30,7 +30,7 @@ import com.waes.diff.service.Base64DocumentDiffService;
 /**
  * The implementation class for Base64DocumentDiffService interface.
  * 
- * @see {com.waes.diff.service.Base64DocumentDiffService}
+ * @see com.waes.diff.service.Base64DocumentDiffService
  * @author Rantidev Singh
  * @version 1.0
  * @since 2020-10-01

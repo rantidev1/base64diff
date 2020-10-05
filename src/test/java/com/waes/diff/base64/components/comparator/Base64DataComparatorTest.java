@@ -27,7 +27,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.waes.diff.base64.components.comparator.IBase64DataComparator;
 import com.waes.diff.model.Base64DiffResponse;
 import com.waes.diff.repository.Base64DocumentRepository;
 import com.waes.diff.util.Constants;
